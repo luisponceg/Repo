@@ -1,0 +1,10 @@
+hOLA MUNDOCD 
+git remote add origin https://Luipo87@bitbucket.org/Luipo87/repositorio-local.git
+git push -u origin master
+git remote -v 
+
+git remote add origin  https://Luipo87@bitbucket.org/Luipo87/repositorio-local.git
+echo "# Repo" >> README.md
+
+git status
+git init
