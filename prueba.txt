@@ -1,10 +1,9 @@
-hOLA MUNDOCD 
-git remote add origin https://Luipo87@bitbucket.org/Luipo87/repositorio-local.git
-git push -u origin master
-git remote -v 
+PS C:\Users\lu15p\Desktop\Repo> echo "# Repo" >> README.md
+PS C:\Users\lu15p\Desktop\Repo> git init
+Initialized empty Git repository in C:/Users/lu15p/Desktop/Repo/.git/
+PS C:\Users\lu15p\Desktop\Repo> git add README.md
+PS C:\Users\lu15p\Desktop\Repo> git commit -m "first commit"
+PS C:\Users\lu15p\Desktop\Repo> git remote add origin https://github.com/luisponceg/Repo.git
+PS C:\Users\lu15p\Desktop\Repo> git push -u origin master 
 
-git remote add origin  https://Luipo87@bitbucket.org/Luipo87/repositorio-local.git
-echo "# Repo" >> README.md
-
-git status
-git init
+probando guardado
