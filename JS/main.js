@@ -7,10 +7,11 @@ var concat = nombre + " " +altura;
 var datos = document.getElementById("datos");
 /*datos.innerHTML = concat;*/
 
-datos.innerHTML =
-      <h1>Soy caja de datos</h1>
-      <h2>Mi nombre es: $(nombre)</h2>
-      <h3>Mido: $(altura) cm</h3>
-;
-
+datos.innerHTML =`<h1> Soy caja de datos</h1>`
+console.log(saludo2);
+/*`<h1> Soy caja de datos</h1>
+<h2>Mi nombre es: ${nombre}</h2>
+<h3>Mido: ${altura} cm</h3>`*/
+     ;
+     
 
