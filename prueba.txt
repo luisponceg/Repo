@@ -3,6 +3,8 @@ PS C:\Users\lu15p\Desktop\Repo> git init
 Initialized empty Git repository in C:/Users/lu15p/Desktop/Repo/.git/
 PS C:\Users\lu15p\Desktop\Repo> git add README.md
 PS C:\Users\lu15p\Desktop\Repo> git commit -m "first commit"
+git show
+git log
 PS C:\Users\lu15p\Desktop\Repo> git remote add origin https://github.com/luisponceg/Repo.git
 PS C:\Users\lu15p\Desktop\Repo> git push -u origin master 
 

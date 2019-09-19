@@ -1,15 +1,46 @@
-alert("Hello World!");
-// console.log('Hola Mundo');
- var nombre = "luis ponce";
- var altura = 170;
-// var concat = nombre + " " +altura;   
-/*document.write(concat);*/
+document.addEventListener('DOMContentLoaded', () => {
 
-// var datos = document.getElementById("datos");
-/*datos.innerHTML = concat;*/
+     alert("Hello World!");
+     //console.log('Hola Mundo');
+     var nombre = "luis ponce";
+     var altura = 170;
+     //var concat = nombre + " " +altura;   
+    // /*document.write(concat);*/
+    
+    
 
-datos.innerHTML =
-`<h1> Soy caja de datos</h1>
-<h2>Mi nombre es: ${nombre}</h2>
-<h3>Mido: ${altura} cm</h3>`
-     
+     if(altura > 190){
+         datos.innerHTML += 'Eres una persona alta </h1>';
+     }else{
+         datos.innerHTML +='eres chaparro </h1>'
+     }
+
+     for(var i=2000;i<=2020;i++){
+         datos.innerHTML +='<h2>Estamos en el año'+i;
+     }
+    function MuestraMiNombre(nombre,altura){
+        var misDatos = 
+         `<h1> Soy caja de datos</h1>
+         <h2>Mi nombre es: ${nombre}</h2>
+         <h3>Mido: ${altura} cm</h3>`;
+         return misDatos;
+    }
+
+    function imprimir(){
+        var datos = document.getElementById("datos");
+        datos.innerHTML= MuestraMiNombre("Luis Ponce",180);
+    }
+   imprimir();
+   var nombres = ['Luis','Alberto','Luigi'];
+
+   document.write('<h1>Listado de nombres</h1>');
+//    for(i = 0; i < nombres.length; i++){
+//     document.write(nombres[i]+ '<br/>');
+//    }
+
+nombres.forEach((nombre)=> {
+    document.write(nombre+ '<br/>');
+});
+
+
+});
