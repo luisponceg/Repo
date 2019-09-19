@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // /*document.write(concat);*/
     
     
+  
+    //  if(altura > 190){
+    //      datos.innerHTML += 'Eres una persona alta </h1>';
+    //  }else{
+    //      datos.innerHTML +='eres chaparro </h1>';
+    //  }
 
-     if(altura > 190){
-         datos.innerHTML += 'Eres una persona alta </h1>';
-     }else{
-         datos.innerHTML +='eres chaparro </h1>'
-     }
-
-     for(var i=2000;i<=2020;i++){
-         datos.innerHTML +='<h2>Estamos en el año'+i;
-     }
+    //  for(var i=2000;i<=2020;i++){
+    //      datos.innerHTML +='<h2>Estamos en el año'+i;
+    //  }
     function MuestraMiNombre(nombre,altura){
         var misDatos = 
          `<h1> Soy caja de datos</h1>
@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 nombres.forEach((nombre)=> {
     document.write(nombre+ '<br/>');
+    var coche ={
+        modelo: 'Mercedes Clase A',
+        maxima: 500,
+        antiguedad: 2020,
+        mostrarDatos(){
+            console.log(this.modelo,this.maxima,this.antiguedad)
+        },
+        propiedad1: "valor aleatorio"
+    };
+document.write("<h2>" + coche.modelo+ "</h2>");
+coche.mostrarDatos();
 });
 
 
