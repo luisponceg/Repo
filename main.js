@@ -51,6 +51,28 @@ nombres.forEach((nombre)=> {
     };
 document.write("<h2>" + coche.modelo+ "</h2>");
 coche.mostrarDatos();
+console.log(coche);
+
+
+});
+ var saludar = new Promise((resolve, reject)=>{
+     setTimeout(()=>{
+         //let saludo = "Hola soy un saludo";
+         let saludo = false;
+         if (saludo){
+             resolve(saludo);
+         }else{
+             reject('No hay saludo disponible');
+         }
+     },2000)
+ })
+
+saludar.then(resultado => {
+    alert(resultado);
+})
+.catch(err=> {
+    alert(err);
+
 });
 
 
