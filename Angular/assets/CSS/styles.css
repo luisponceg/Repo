@@ -51,17 +51,18 @@ font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helve
 }
 
 #menu{
-    width: 70%;
+    width: 80%;
     float: right;
     font-size: 18px;
-
+    margin-left:  -14em;
+    
 }
 
 #menu ul{
     display: inline-block;
     line-height: 85px;
     width: 60%;
-    float: right;
+    
 }
 
 #menu li{
