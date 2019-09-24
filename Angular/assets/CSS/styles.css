@@ -44,12 +44,12 @@ font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helve
     animation: girar infinite 30s linear;
 } 
 @keyframes girar{
-    from{
+   /* from{
         transform: rotate(0deg);
     }
     to{
         transform: rotate(360deg);
-    }
+    }*/
     10%{
         height: 100px;
     }
@@ -62,7 +62,7 @@ font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helve
 
 
 #brand{
-    display: block;  
+    /*display: block;  */
     margin: 0px;
     float: left;
 
@@ -128,15 +128,35 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4d', end
     
 }
 .btn-white{
-    /*display: inline-block;*/
+    /*display: block;*/
     background: white;
     color:black;
     padding: 10px;
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 33px;
     margin: 0px auto;
     font-size: 18px;
     text-transform: uppercase;
-    text-shadow: none; 
+    text-decoration: none;
+    line-height: 35px;
+    text-shadow: none;
+    box-shadow: 0px 0px 5px #444;
+    margin-top: 20px; 
+    border-radius: 4px; 
 
+}
+
+.btn-white:hover{
+    background: chocolate;
+    color: #444;
+}
+#slider.slider-small{
+    height: 150px;
+}
+
+.slider-small h1{
+    margin-top: 0.2px;
+    padding: 0px;
+    padding-top: 70px;
+   
 }
