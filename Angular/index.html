@@ -8,20 +8,6 @@
     <!--Hoja de stylo-->
     <link rel="stylesheet" type ="text/css" href="assets/CSS/styles.css"/>
       <!--Add.addEventListener solo se ejecuta una vez que se haya cargado la pagina-->
-      <script>
-                        
-            window.addEventListener("load",function(event){
-                var template = document.getElementById("article-template");
-            var clonar = template.cloneNode(true);
-
-            for (var i=0; i<=5; i++){
-                alert("Estamos en" + i);
-            }
-
-
-            })
-         
-    </script>
 </head>
     <body>
      
@@ -55,18 +41,40 @@
             <div class="center">
                 <section id="content">
                     <h2>Ultimos articulos</h2>
-                    
-                    <!--Listado de articulos-->
+                    <script type="text/javascript">
+                        
+                        window.addEventListener("load",function(event){
+                            var template = document.getElementById("article-template");
+                       
+                        var articles = document.getElementById("articles")
+                        
+                        for (var i=0; i<=5; i++){
+                           var clonado = template.cloneNode(true);
+                           articles.appendChild(clonado);
+                        }
+            
+            
+                        })
+                     
+                </script>
+                <div id = "articles">
+                       <!--Listado de articulos-->
                     <article class ="article-item" id="article-template">
-                        <div class="image-wrap">
-                            <img src="https://3.bp.blogspot.com/-4QhJO1FIbag/WRrhBadfiII/AAAAAAAAHqQ/gSSu7_UeOJEKwCdYhmXsyMVdsEkWzSywgCLcB/s1600/mars%2Blandscape%2B625.jpg" alt="Paisaje">
-                        </div>
-                        <h2>Articulo de prueba</h2>
-                        <span class="date">
-                            Hace 5 min
-                        </span>
-                        <a href="#">Leer mas</a>
-                    </article>
+                            <div class="image-wrap">
+                                <img src="https://3.bp.blogspot.com/-4QhJO1FIbag/WRrhBadfiII/AAAAAAAAHqQ/gSSu7_UeOJEKwCdYhmXsyMVdsEkWzSywgCLcB/s1600/mars%2Blandscape%2B625.jpg" alt="Paisaje">
+                            </div>
+                            <h2>Articulo de prueba</h2>
+                            <span class="date">
+                                Hace 5 min
+                            </span>
+                            <a href="#">Leer mas</a>
+                        </article>
+                        <!--Añadir articulos via JS-->
+
+
+                </div>
+                    
+                  
 
                 </section>
               
