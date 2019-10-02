@@ -8,6 +8,25 @@
     <!--Hoja de stylo-->
     <link rel="stylesheet" type ="text/css" href="assets/CSS/styles.css"/>
       <!--Add.addEventListener solo se ejecuta una vez que se haya cargado la pagina-->
+      <script type="text/javascript">
+                        
+        window.addEventListener("load",function(event){
+            var template = document.getElementById("article-template");
+       
+        var articles = document.getElementById("articles")
+        
+        for (var i=0; i<=5; i++){
+           var clonado = template.cloneNode(true);
+           var h2 =clonado.getElementsByTagName("h2")[0];
+           console.log(h2);
+           h2.innerHTML = h2.textcontent + ''+i;
+           articles.appendChild(clonado);
+        }
+
+
+        })
+     
+</script>
 </head>  
     <body>
      
@@ -41,22 +60,7 @@
             <div class="center">
                 <section id="content">
                     <h2>Ultimos articulos</h2>
-                    <script type="text/javascript">
-                        
-                        window.addEventListener("load",function(event){
-                            var template = document.getElementById("article-template");
-                       
-                        var articles = document.getElementById("articles")
-                        
-                        for (var i=0; i<=5; i++){
-                           var clonado = template.cloneNode(true);
-                           articles.appendChild(clonado);
-                        }
-            
-            
-                        })
-                     
-                </script>
+                  
                 <div id = "articles">
                        <!--Listado de articulos-->
                     <article class ="article-item" id="article-template">
@@ -70,8 +74,6 @@
                             <a href="#">Leer mas</a>
                         </article>
                         <!--Añadir articulos via JS-->
-
-
                 </div>
         
                 </section>
