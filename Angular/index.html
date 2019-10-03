@@ -17,6 +17,7 @@
         
         for (var i=1; i<=5; i++){
            var clonado = template.cloneNode(true);
+           clonado.removeAttribute("id");
            var h2 =clonado.getElementsByTagName("h2")[0];
            console.log(h2);
            h2.innerHTML = h2.textContent + ' ' +i;
@@ -72,6 +73,7 @@
                                 Hace 5 min
                             </span>
                             <a href="#">Leer mas</a>
+                            <div class="clearfix"></div>
                         </article>
                         <!--Añadir articulos via JS-->
                 </div>
