@@ -15,11 +15,11 @@
        
         var articles = document.getElementById("articles")
         
-        for (var i=0; i<=5; i++){
+        for (var i=1; i<=5; i++){
            var clonado = template.cloneNode(true);
            var h2 =clonado.getElementsByTagName("h2")[0];
            console.log(h2);
-           h2.innerHTML = h2.textcontent + ''+i;
+           h2.innerHTML = h2.textContent + ' ' +i;
            articles.appendChild(clonado);
         }
 
