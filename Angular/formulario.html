@@ -37,29 +37,33 @@
       
             <div class="center">
                 <section id="content">
-                   
-                       <!--Listado de articulos-->
-                    <article class ="article-item article-detail">
-                            <div class="image-wrap">
-                                <img src="https://3.bp.blogspot.com/-4QhJO1FIbag/WRrhBadfiII/AAAAAAAAHqQ/gSSu7_UeOJEKwCdYhmXsyMVdsEkWzSywgCLcB/s1600/mars%2Blandscape%2B625.jpg" alt="Paisaje">
+                        <h1 class="subheader" >Formulario</h1>
+                        <form class="mid-form" >
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre"/>
                             </div>
-                            <h1 class="subheader">Articulo de prueba</h1>
-                            <span class="date">
-                                Hace 5 min
-                            </span>
-                            <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                            <P>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </P>
-                            <P>
-                                    Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure.”
-                            </P>
+
+                            <div class="form-group">
+                                <label for="nombre">Apellidos</label>
+                                <input type="text" name="apellidos"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Biografia</label>
+                                <textarea name="bio" id="1" cols="30" rows="10"></textarea>                                                            
+                            </div>
+
+                            <div class="form-group radibuttons">    
+                                <input type="radio" name="genero" value="hombre"/>Hombre
+                                <input type="radio" name="genero" value="mujer"/>Mujer
+                                <input type="radio" name="genero" value="otro"/>Otro
+                            </div>
+
                             <div class="clearfix"></div>
-                        </article>
-                        <!--Añadir articulos via JS-->
-        
+
+                            <input type="submit" value="Enviar" class="btn btn-success"/>
+                            <div class="clearfix"></div>
+                        </form>
                 </section>
               
                 <aside id="sidebar">
@@ -72,7 +76,7 @@
                         <p>Encuentra el articulo que buscas</p>
                         <form >
                             <input type="text" name="search"/>
-                            <input type="submit" name="submit" value="buscar" class="btn"/>
+                            <input type="submit" name="submit" value="buscar" class="btn btn-success"/>
                         </form>
                     </div>          
                 </aside>
