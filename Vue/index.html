@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maquetacion Angular</title>
+    <!--Hoja de stylo-->
+    <link rel="stylesheet" type ="text/css" href="assets/CSS/styles.css"/>
+      <!--Add.addEventListener solo se ejecuta una vez que se haya cargado la pagina-->
+      <script type="text/javascript">
+                        
+        window.addEventListener("load",function(event){
+            var template = document.getElementById("article-template");
+       
+        var articles = document.getElementById("articles")
+        
+        for (var i=1; i<=5; i++){
+           var clonado = template.cloneNode(true);
+           clonado.removeAttribute("id");
+           var h2 =clonado.getElementsByTagName("h2")[0];
+           console.log(h2);
+           h2.innerHTML = h2.textContent + ' ' +i;
+           articles.appendChild(clonado);
+        }
+
+
+        })
+     
+</script>
+</head>  
+    <body>
+     
+            <header id="header">
+              
+                <div class="center">
+                      <!--Logo-->
+                      <div id= "logo">
+                          <img src="assets/images/angular.png" class= "app-logo"   alt="Logotipo">
+                          <span id="brand">
+                              <strong>Master</strong>Frameworws.js
+                          </span>
+                      </div>
+                      <div class="clearfix"></div> 
+                       <!--menu-->
+                       <nav id="menu">
+                           <ul>
+                               <li><a href="index.html">Inicio</a></li><li><a href="blog.html">Blog</a></li><li><a href="formulario.html">Formulario</a></li><li><a href="#">Pagina1</a></li><li><a href="#">Pagina2</a></li>
+                            </ul>
+                       </nav>
+                </div>
+               <!--Limpiar float del ccs-->
+               <div class="clearfix"></div>    
+            </header>
+            <div id="slider" class="slider-big">
+                <h1>Bienvenido a mi pagina</h1>
+                <a href="./blog.html" class="btn-white">Ir al blog</a>
+                
+            </div>
+            <div class="clearfix"></div>
+      
+            <div class="center">
+                <section id="content">
+                    <h2 clas = "subheader">Ultimos articulos</h2>
+                  
+                <div id = "articles">
+                       <!--Listado de articulos-->
+                    <article class ="article-item" id="article-template">
+                            <div class="image-wrap">
+                                <img src="https://3.bp.blogspot.com/-4QhJO1FIbag/WRrhBadfiII/AAAAAAAAHqQ/gSSu7_UeOJEKwCdYhmXsyMVdsEkWzSywgCLcB/s1600/mars%2Blandscape%2B625.jpg" alt="Paisaje">
+                            </div>
+                           
+                            <h2>Articulo de prueba</h2>
+                            <span class="date">
+                                Hace 5 min
+                            </span>
+                            <a href="#">Leer mas</a>
+                            <div class="clearfix"></div>
+                        </article>
+                        <!--Añadir articulos via JS-->
+                </div>
+        
+                </section>
+              
+                <aside id="sidebar">
+                    <div id="nav-blog" class ="sidebar-item">
+                        <h3>Puedes hacer esto</h3>
+                        <a href="#" class="btn btn-success">Crear articulo</a>
+                    </div>
+                    <div id="search" class="sidebar-item">
+                        <h3>Buscador</h3>
+                        <p>Encuentra el articulo que buscas</p>
+                        <form >
+                            <input type="text" name="search"/>
+                            <input type="submit" name="submit" value="buscar" class="btn btn-success"/>
+                        </form>
+                    </div>          
+                </aside>
+                <div class="clearfix"></div>
+            </div>
+            <footer id="footer">
+                <div class="center">
+                    <p>
+                        &copy;Master en Frameworks para JavaScript
+                    </p>
+                </div>
+
+            </footer>
+    </body>
+
+</html>
