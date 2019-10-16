@@ -1,6 +1,6 @@
 body{
 text-align: center;
-background: red;
+background: green;
 margin: 0px;
 padding : 0px;
 font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -17,7 +17,7 @@ font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helve
     width: 100%;
     background: white;
     border-bottom: 1px solid #ccc;
-    border-top: 5px solid rgb(209, 56, 56);
+    border-top: 5px solid rgb(12, 156, 43);
 }
 
 .center{
@@ -38,8 +38,8 @@ font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helve
 #logo img{
     display: block;
     float : left;
-    height: 60px;
-    margin-top: -10px;
+    height: 30px;
+    margin-top: 30px;
     margin-right: -10px;
     animation: girar infinite 5s linear;
 } 
@@ -124,14 +124,15 @@ font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helve
     line-height:70px;
     color: white;
     text-shadow: 0px 0px 5px #444;
-    background: rgb(226, 51, 7);
-background: -moz-linear-gradient(top, rgba(255,175,77,1) 0%, rgba(255,145,10,0.58) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,175,77,1)), color-stop(100%, rgba(255,145,10,0.58)));
-background: -webkit-linear-gradient(top, rgba(255,175,77,1) 0%, rgba(255,145,10,0.58) 100%);
-background: -o-linear-gradient(top, rgba(255,175,77,1) 0%, rgba(255,145,10,0.58) 100%);
-background: -ms-linear-gradient(top, rgba(255,175,77,1) 0%, rgba(255,145,10,0.58) 100%);
-background: linear-gradient(to bottom, rgba(255,175,77,1) 0%, rgba(255,145,10,0.58) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4d', endColorstr='#ff910a', GradientType=0 );
+    
+background: rgba(80,215,92,1);
+background: -moz-linear-gradient(top, rgba(80,215,92,1) 43%, rgba(74,209,86,1) 47%, rgba(28,159,32,1) 80%, rgba(0,128,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(43%, rgba(80,215,92,1)), color-stop(47%, rgba(74,209,86,1)), color-stop(80%, rgba(28,159,32,1)), color-stop(100%, rgba(0,128,0,1)));
+background: -webkit-linear-gradient(top, rgba(80,215,92,1) 43%, rgba(74,209,86,1) 47%, rgba(28,159,32,1) 80%, rgba(0,128,0,1) 100%);
+background: -o-linear-gradient(top, rgba(80,215,92,1) 43%, rgba(74,209,86,1) 47%, rgba(28,159,32,1) 80%, rgba(0,128,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(80,215,92,1) 43%, rgba(74,209,86,1) 47%, rgba(28,159,32,1) 80%, rgba(0,128,0,1) 100%);
+background: linear-gradient(to bottom, rgba(80,215,92,1) 43%, rgba(74,209,86,1) 47%, rgba(28,159,32,1) 80%, rgba(0,128,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50d75c', endColorstr='#008000', GradientType=0 );
 }
 #slider.slider-big h1{
     margin-top: 0px;
@@ -367,7 +368,7 @@ textarea{
 /*Desde la anchura 0px hasta la anchura 1488px de pantalla*/
 @media (max-width: 1488px){
       body{
-          background: red;
+          background: green;
       }
       .center{
           width: 95%;
@@ -379,7 +380,7 @@ textarea{
 
 @media (max-width: 1000px){
     body{
-        background: orange;
+        background: rgb(179, 235, 25);
 
     }
     #menu{
@@ -389,7 +390,7 @@ textarea{
 
 @media (max-width: 848px){
     body{
-        background: orange;
+        background:rgb(179, 235, 25);
 
     }
     #menu{
@@ -405,16 +406,15 @@ textarea{
 
 @media (max-width: 635px){
     body{
-        background: orange;
-
+        background: rgb(179, 235, 25);
     }
     #menu{
         width: auto;
-        margin-top: 50px;
+        margin-top: 40px;
+        padding:0px;
     }
     #logo{
         margin: auto;
-       
     }
     #content{
         width: auto;
@@ -422,4 +422,50 @@ textarea{
     #sidebar{
         width: auto;
     }
+}
+@media (max-width: 494px){
+    body{
+        background: rgb(179, 235, 25);
+
+    }
+    #menu{
+        width: auto;
+        margin-top: 50px;
+        padding:0px;
+    }
+    #logo{
+        margin: auto;
+        padding:0px;
+        height: 200px;
+        width: 100px;
+    }
+    #content{
+        width: auto;
+    }
+    #sidebar{
+        width: auto;
+    }
+}
+@media (max-width: 360px){
+    body{
+        background: rgb(179, 235, 25);
+
+    }
+    #menu{
+        width: 50px;
+        margin-top: 50px;
+        
+    }
+    #logo{
+        margin: auto;
+        padding:0px;
+    
+    }
+    #content{
+        width: auto;
+    }
+    #sidebar{
+        width: auto;
+    }
+  
 }
