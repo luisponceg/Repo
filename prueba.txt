@@ -7,5 +7,7 @@ git show
 git log
 PS C:\Users\lu15p\Desktop\Repo> git remote add origin https://github.com/luisponceg/Repo.git
 PS C:\Users\lu15p\Desktop\Repo> git push -u origin master 
+git config --global user.email "l.ponce@feraz"
+git config --global user.email l.ponce@feraz
 
 probando guardado
