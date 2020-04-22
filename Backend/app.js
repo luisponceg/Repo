@@ -1,7 +1,13 @@
 'use strict'
+// cargar modulos de node para crear servidor
+var expres=require('express');
+var bodyPerse=require('body-parser');
 
-var mongoose= require('mongoose')
- 
-mongoose.connect('momgodb7/localhost:27017/api_rest_blog',{userNewUrlParser:true}).then(()=>{
-console.log('La consola de datos se ha realizado bien !!')
-})
+//Ejecutar express (http)
+var app = express();
+//Cargar Ficheros Rutas
+//MiddLewares
+app.use(bodyParser.urlencoded({extended:false}))
+//CORS para permitir peticiones desde el front-end
+//Exportar el módulo
+module.exports=app;
