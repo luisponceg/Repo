@@ -13,7 +13,11 @@ app.use(bodyParser.json());
 //Añadir prefijo para rutas
 //ruta o metodo de prueba
 app.get('/probando',(req,res)=>{
-   console.log('Hola mundo');
+    //http codes para los codigos de respuesta
+    return res.status(200).send({
+        curso: 'Framework js'
+    });
+   // console.log('Hola mundo');
 });
 //Exportar el módulo
 module.exports=app;
