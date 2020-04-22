@@ -7,7 +7,9 @@ var bodyParser=require('body-parser');
 var app = express();
 //Cargar Ficheros Rutas
 //MiddLewares
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 //CORS para permitir peticiones desde el front-end
+//Añadir prefijo para rutas
 //Exportar el módulo
 module.exports=app;
