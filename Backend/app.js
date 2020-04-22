@@ -1,7 +1,7 @@
 'use strict'
 // cargar modulos de node para crear servidor
-var expres=require('express');
-var bodyPerse=require('body-parser');
+var express=require('express');
+var bodyParse=require('body-parser');
 
 //Ejecutar express (http)
 var app = express();
