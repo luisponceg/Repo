@@ -6,12 +6,15 @@ var bodyParser=require('body-parser');
 //Ejecutar express (http)
 var app = express();
 //Cargar Ficheros Rutas
+var article_routes = require('./routes/article');
 //MiddLewares
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 //CORS para permitir peticiones desde el front-end
-//Añadir prefijo para rutas
+//Añadir prefijo para rutas/cargar rutas
+app.use('/',article_routes);
 //ruta o metodo de prueba
+/*
 app.get('/probando',(req,res)=>{
     //http codes para los codigos de respuesta
    var hola =req.body.hola;
@@ -24,5 +27,6 @@ app.get('/probando',(req,res)=>{
     });
    // console.log('Hola mundo');
 });
+*/
 //Exportar el módulo
 module.exports=app;
