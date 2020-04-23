@@ -14,8 +14,13 @@ app.use(bodyParser.json());
 //ruta o metodo de prueba
 app.get('/probando',(req,res)=>{
     //http codes para los codigos de respuesta
+   var hola=req.body.hola;
     return res.status(200).send({
-        curso: 'Framework js'
+        curso: 'Framework js',
+        autor: 'Luis Ponce',
+        url: 'wwx.LuisPonce.com',
+        hola
+
     });
    // console.log('Hola mundo');
 });
