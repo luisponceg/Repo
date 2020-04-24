@@ -5,7 +5,7 @@ var ArticleController = require('../controllers/article');
 
 var router= express.Router();
 
-router.get('/datos-curso',ArticleController.test);
-router.post('/test-de-controlador',ArticleController.datosCurso);
+router.post('/datos-curso',ArticleController.datosCurso);
+router.get('/test-de-controlador',ArticleController.test);
 
 module.exports = router;
