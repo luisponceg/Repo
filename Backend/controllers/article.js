@@ -3,12 +3,12 @@
 var controller ={
     datosCurso: (req,res)=> {
         //http codes para los codigos de respuesta
-       var hola =req.body.hola;
+       //var hola =req.body.hola;
         return res.status(200).send({
             curso: 'Framework js',
             autor: 'Luis Ponce',
-            url: 'www.LuisPonce.com',
-            hola
+            url: 'www.LuisPonce.com'
+         //   hola
     
         });       // console.log('Hola mundo');
    
