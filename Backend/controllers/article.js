@@ -24,7 +24,7 @@ var controller ={
 
    save: (req, res) =>{
        // Recoger datos por post
-       var params = req.body; //recoge datos del body
+       //var params = req.body; //recoge datos del body
        //console.log(params);
        //Validar datos(validator)
       /* try{
@@ -45,8 +45,8 @@ var controller ={
        //Asignar valores
        //Devolver una respuesta
        return res.status(200).send({
-           //message: 'Soy la accion SAVE de mi controlador'
-           article: params
+           message: 'Soy la accion SAVE de mi controlador'
+           //article: params
        });
 
    }
