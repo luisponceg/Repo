@@ -35,6 +35,7 @@ var controller ={
             message: 'Faltan datos por enviar'
         });
     }
+    
     if(validate_title && validate_content){
         return res.status(200).send({
             message:"Validacion correcta"
