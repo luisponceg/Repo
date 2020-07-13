@@ -27,7 +27,7 @@ var controller ={
        var params = req.body; //recoge datos del body
        //console.log(params);
        //Validar datos(validator)
-       try{
+      /* try{
            var validate_title = !validator.isEmpty(params.title);//si el parametro tiltle del body está vacío
            var validate_content = !validator.isEmpty(params.content);
        }catch(err){
@@ -40,7 +40,7 @@ var controller ={
         return res.status(200).send({
             message:"Validacion correcta"
         });
-    }
+    }*/
        //Crear el objeto a guardar
        //Asignar valores
        //Devolver una respuesta
