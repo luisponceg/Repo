@@ -1,14 +1,14 @@
 'use strict'
 
-var mongoose=require('mongoose');
-var Schema=mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var ArticleSchema = Schema({
     title: String,
     content: String,
-    date:{type:Date,default:Date.now},
+    date: { type: Date, default: Date.now },
     image: String
-})
+});
 
-module.exports = mongoose.model('Article'.ArticleSchema);
-// articles----->mongo db guarda documentos de este tipo y con estructura dntro de la coleccion
+module.exports = mongoose.model('Article', ArticleSchema);
+// articles --> guarda documentos de este tipo y con estructura dentro de la colección
