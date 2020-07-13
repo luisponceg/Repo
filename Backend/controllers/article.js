@@ -1,7 +1,7 @@
 'use strict'
 
 var validator = require('validator');
-var Article = require('../models/article');
+//var Article = require('../models/article');
 var controller ={
     datosCurso: (req,res)=> {
         //http codes para los codigos de respuesta
