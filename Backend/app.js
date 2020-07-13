@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 //CORS para permitir peticiones desde el front-end
 //Añadir prefijo para rutas/cargar rutas
-app.use('/',article_routes);
+app.use('/api',article_routes);
 //ruta o metodo de prueba
 /*
 app.get('/probando',(req,res)=>{

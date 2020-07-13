@@ -18,7 +18,14 @@ var controller ={
        return res.status(200).send({
            message: 'soy la accion test de mi controlador de articulos'
        });
-   } 
-}
+   } ,
+
+   save: (req, res) =>{
+       return res.status(200).send({
+           message: 'Soy la accion SAVE de mi controlador'
+       });
+
+   }
+};// end controller
 
 module.exports =controller;
