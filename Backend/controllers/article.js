@@ -38,6 +38,11 @@ var controller ={
     }
     
     if(validate_title && validate_content){
+        //Crear el objeto a guardar
+       //Asignar valores
+       //Devolver una respuesta
+      
+
         return res.status(200).send({
             //message: 'Soy la accion SAVE de mi controlador'
             article: params
@@ -46,13 +51,9 @@ var controller ={
         return res.status(200).send({
             status : 'error',
             message: 'Los datos no son validos'
-           
+        });
     }
-       //Crear el objeto a guardar
-       //Asignar valores
-       //Devolver una respuesta
-      
-
+       
    }//end Save
 };// end controller
 
