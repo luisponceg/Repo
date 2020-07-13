@@ -28,14 +28,14 @@ var controller ={
        //console.log(params);
        //Validar datos(validator)
        try{
-           var validate_title = !validator.isEmpty(params.title)//si el parametro tiltle del body está vacío
-           var validate_content = !validator.isEmpty(params.content)
+           var validate_title = !validator.isEmpty(params.title);//si el parametro tiltle del body está vacío
+           var validate_content = !validator.isEmpty(params.content);
        }catch(err){
             return res.status(200).send({            
             message: 'Faltan datos por enviar'
         });
     }
-    if(validate_title && validate_contente){
+    if(validate_title && validate_content){
         return res.status(200).send({
             message:"Validacion correcta"
         });
