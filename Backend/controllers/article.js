@@ -1,5 +1,7 @@
 'use strict'
 
+var validator = require('validator');
+var Article = require('../models/article');
 var controller ={
     datosCurso: (req,res)=> {
         //http codes para los codigos de respuesta
@@ -25,6 +27,19 @@ var controller ={
        var params = req.body; //recoge datos del body
        //console.log(params);
        //Validar datos(validator)
+       try{
+           var validate_title = !validator.isEmpty(params.title)//si el parametro tiltle del body está vacío
+           var validate_content = !validator.isEmpty(params.content)
+       }catch(err){
+            return res.status(200).send({            
+            message: 'Faltan datos por enviar'
+        });
+    }
+    if(validate_title && validate_contente){
+        return res.status(200).send({
+            message:"Validacion correcta"
+        });
+    }
        //Crear el objeto a guardar
        //Asignar valores
        //Devolver una respuesta
