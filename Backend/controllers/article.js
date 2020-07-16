@@ -39,12 +39,18 @@ var controller ={
     
     if(validate_title && validate_content){
         //Crear el objeto a guardar
-       //Asignar valores
-       //Devolver una respuesta
+        var article = new Article();
+
+        //Asignar valores
+        article.title= params.title;
+        article.comtent = params.content;
+        article.image = null;
+        //Devolver una respuesta
       
 
         return res.status(200).send({
             //message: 'Soy la accion SAVE de mi controlador'
+            status: "succes",
             article: params
         });
     }else{
