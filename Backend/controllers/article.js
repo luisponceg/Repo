@@ -43,7 +43,7 @@ var controller ={
 
         //Asignar valores
         article.title= params.title;
-        article.comtent = params.content;
+        article.content = params.content;
         article.image = null;
         //Guardar el articulo
         
@@ -51,17 +51,18 @@ var controller ={
              if(err||!articleStored){
                  return res .status(404).send({
                      satatus: 'error',
-                     message: 'Los datos no son validos !!!'
+                     message: 'El articulo no se ha guardado !!!'
                  })
              }
-        });
-        
-        //Devolver una respuesta
+              //Devolver una respuesta
         return res.status(200).send({
             //message: 'Soy la accion SAVE de mi controlador'
             status: "succes",
             article: articleStored
         }); 
+        });
+        
+       
        
     }else{
         return res.status(200).send({
