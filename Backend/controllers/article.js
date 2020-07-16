@@ -45,14 +45,24 @@ var controller ={
         article.title= params.title;
         article.comtent = params.content;
         article.image = null;
+        //Guardar el articulo
+        
+        article.save((err,articleStored)=>{
+             if(err||!articleStored){
+                 return res .status(404).send({
+                     satatus: 'error',
+                     message: 'Los datos no son validos !!!'
+                 })
+             }
+        });
+        
         //Devolver una respuesta
-      
-
         return res.status(200).send({
             //message: 'Soy la accion SAVE de mi controlador'
             status: "succes",
-            article: params
-        });
+            article: articleStored
+        }); 
+       
     }else{
         return res.status(200).send({
             status : 'error',
