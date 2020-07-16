@@ -1,5 +1,5 @@
 'use strict'
-
+ 
 var validator = require('validator');
 var Article = require('../models/article');
 var controller ={
