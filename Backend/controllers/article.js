@@ -71,7 +71,44 @@ var controller ={
         });
     }
        
-   }//end Save
+   },//end Save
+   //Metodo que saca todos los articulos
+   getArticles: (req, res) => {
+
+    var query = Article.find({});
+
+    var last = req.params.last;
+    if(last || last != undefined){
+        query.limit(5);
+    }
+
+    // Find
+    query.sort('-_id').exec((err, articles) => {
+
+        if(err){
+            return res.status(500).send({
+                status: 'error',
+                message: 'Error al devolver los articulos !!!'
+            });
+        }
+
+        if(!articles){
+            return res.status(404).send({
+                status: 'error',
+                message: 'No hay articulos para mostrar !!!'
+            });
+        }
+
+        return res.status(200).send({
+            status: 'success',
+            articles
+        });
+
+    });
+}
+
+       
+   
 };// end controller
 
 module.exports =controller;

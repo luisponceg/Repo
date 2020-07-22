@@ -9,5 +9,6 @@ router.post('/datos-curso',ArticleController.datosCurso);
 router.get('/test-de-controlador',ArticleController.test);
 // Rutas para articulos
 router.post('/save',ArticleController.save);
+router.get('/articles',ArticleController.getArticles);
 
 module.exports = router;
