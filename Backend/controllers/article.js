@@ -105,7 +105,46 @@ var controller ={
         });
 
     });
-}
+},
+
+   getArticle: (req, res) => {
+       //Recoger el id de la url
+       var articleID =req.params.id;
+
+       //comprobar que existe
+       if(!articleID || articleID == null){
+          return res.status(404).send({
+            status: 'error',
+            message: 'no existe el articulo'
+          }) ;
+           
+       }
+       //Buscar el articulo 
+       Article.findById(articleID,(err,article) =>{
+      
+        if (err || !article){
+            return res.status(404).send({
+                status: 'error',
+                message: 'No existe el articulo!!!'
+              }) ;
+        }
+        //Devolverlo en json
+        return res.status(404).send({
+            status: 'success',
+            article
+        });
+       
+       });
+    
+   },
+
+   update: (req,res)=>{
+    return res.status(404).send({
+        status: 'error',
+        message: 'No existe para actualizar'
+    });
+
+   }
 
        
    
