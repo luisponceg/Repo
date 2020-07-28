@@ -131,7 +131,7 @@ var controller ={
         //Devolverlo en json
         return res.status(404).send({
             status: 'success',
-            article
+            article: articleUpdated
         });
        
        });
@@ -139,12 +139,55 @@ var controller ={
    },
 
    update: (req,res)=>{
-    return res.status(404).send({
-        status: 'error',
-        message: 'No existe para actualizar'
-    });
+       // Recoger el id del articulo que viene de la url
+       var articleID = req.params.id;
+       //recogerlos dtos que llegan por put
+       var params = req.body
+       //validar datos
+       try{
+          var validate_title = !validator.isEmpty(params.title);
+          var validate_content = !validator.isEmpty(params.content);
+       }catch(err){
+           return res.status(200).send({
+               status: 'error',
+               message: 'Faltan datos por enviar'
+           });
+        
+    }
+    
+    if(validate_title && validate_content){
+      //find and update
+      Article.findOneAndUpdate({_id: articleID},params,{new:true},(err,articleUpdated) =>{
+        if(err){
+            return res.status(500).send({
+                status: 'error',
+                message: 'Error al actualizar'
+            });
+        }
+        if(!articleUpdated){
+          return res.status(404).send({
+              status: 'error',
+              message: 'No existe el articulopara actualizar'
+          });
+      }
+      return res.status(200).send({
+          status: 'success',
+          message: 'Articulo actualizado'
+      });
+      });
+         
+    }else{
+          
+       //devolver respuesta
+       return res.status(200).send({
+          status: 'error',
+          message: 'La validacion no es correcta'
+       });
 
-   }
+
+    }
+     
+  }
 
        
    
