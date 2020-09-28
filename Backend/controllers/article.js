@@ -167,7 +167,7 @@ var controller ={
         if(!articleUpdated){
           return res.status(404).send({
               status: 'error',
-              message: 'No existe el articulopara actualizar'
+              message: 'No existe el articulo para actualizar'
           });
       }
       return res.status(200).send({
