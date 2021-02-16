@@ -216,6 +216,13 @@ var controller ={
        
 
     } ,
+
+    upload: (req,res)=>{
+        return res.status(404).send({
+            status: 'error',
+            message: 'no se borro el articulo, posiblemente no existe !!!'
+        });
+    }
    
 };// end controller
 
