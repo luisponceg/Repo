@@ -187,9 +187,15 @@ var controller ={
 
     }
      
-  }
+  },
 
-       
+    delete: (req, res) =>{
+        return res.status(200).send({
+            status: 'error',
+            message: 'La validacion no es correcta'
+         });
+
+    } ,
    
 };// end controller
 
