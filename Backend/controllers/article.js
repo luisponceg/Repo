@@ -224,8 +224,16 @@ var controller ={
         var file_name = 'Imagen no subida......';
 
         console.log(req.files);
+        if(!req.files){
+            return res.status(404).send({
+              status : 'error',
+              message: file_name  
+            })    
+        }
         //conseguir nombre y la extension del archivo
-
+        var file_path = req.files.file0.path;
+        var file_split = file_path.split('\\');
+        
         //comprobar la extension, solo imagenes, si es valida borre el fichero
 
         //buscar el articulo asignar el nobre de la imagen y actualizarlo
