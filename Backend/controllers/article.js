@@ -190,10 +190,30 @@ var controller ={
   },
 
     delete: (req,res)=>{
-        return res.status(200).send({
-            status: 'error',
-            message: 'La validacion no es correcta'
-         });
+        //recoger el id del articulo
+        var articleId = req.params.id;
+        // metodo find one and delete
+        Article.findOneAndDelete({_id: articleId},(err, articleRemoved) =>{
+            if (err){
+                return res.status(500).send({
+                    status: 'error',
+                    message: 'Error al borrar !!!'
+                });
+            }
+            if(!articleRemoved){                
+                return res.status(404).sendd({
+                    status: 'error',
+                    message: 'no se borro el articulo, posiblemente no exixte !!!'
+                });
+            }
+
+            return res.status(200).send({
+                status: 'succes',
+                article: articleRemoved
+             });
+        });
+
+       
 
     } ,
    
