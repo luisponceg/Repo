@@ -201,9 +201,9 @@ var controller ={
                 });
             }
             if(!articleRemoved){                
-                return res.status(404).sendd({
+                return res.status(404).send({
                     status: 'error',
-                    message: 'no se borro el articulo, posiblemente no exixte !!!'
+                    message: 'no se borro el articulo, posiblemente no existe !!!'
                 });
             }
 
