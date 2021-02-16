@@ -218,6 +218,17 @@ var controller ={
     } ,
 
     upload: (req,res)=>{
+        // configurar el modulo connect multypart routes/articles.js
+
+        // Recoger el fichero
+        var file_name = 'Imagen no subida......';
+
+        console.log(req.files);
+        //conseguir nombre y la extension del archivo
+
+        //comprobar la extension, solo imagenes, si es valida borre el fichero
+
+        //buscar el articulo asignar el nobre de la imagen y actualizarlo
         return res.status(404).send({
             status: 'error',
             message: 'no se borro el articulo, posiblemente no existe !!!'
