@@ -2,8 +2,8 @@
  
 var validator = require('validator');
 //importamos los módulos que periten eliminarlos arcchivos
-var fs = require ('fs');
-var path = require ('path');
+var fs = require('fs');
+var path = require('path');
 //-----------------------------
 
 
@@ -253,7 +253,7 @@ var controller ={
 
         //comprobar la extension, solo imagenes, si es valida borre el fichero
         if (file_ext != 'png' && file_ext != 'jpg' && file_ext != 'jpeg' && file_ext != 'gif' ){
-            //borrar el archivo subido
+            //borrar el archivo subido            
             fs.unlink(file_path,(err)=>{
                 return res.status(200).send({
                     status: error,
@@ -269,8 +269,6 @@ var controller ={
                 file_ext
             });
         }           
-
-        
        
     },//end upload file
    
