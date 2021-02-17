@@ -3,7 +3,7 @@
 var validator = require('validator');
 //importamos los módulos que periten eliminarlos arcchivos
 var fs = require('fs');
-var path = require('path');
+var  path= require('path');
 //-----------------------------
 
 
