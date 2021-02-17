@@ -1,6 +1,12 @@
 'use strict'
  
 var validator = require('validator');
+//importamos los módulos que periten eliminarlos arcchivos
+var fs = require ('fs');
+var path = require ('path');
+//-----------------------------
+
+
 var Article = require('../models/article');
 var controller ={
     datosCurso: (req,res)=> {
@@ -246,13 +252,26 @@ var controller ={
         var file_ext = extension_split[1];
 
         //comprobar la extension, solo imagenes, si es valida borre el fichero
+        if (file_ext != 'png' && file_ext != 'jpg' && file_ext != 'jpeg' && file_ext != 'gif' ){
+            //borrar el archivo subido
+            fs.urlink(file_path,(err)=>{
+                return res.status(200).send({
+                    status: error,
+                    message: 'La extension de la imagen no es valida'
+                });
+            });
+        }else{
+            //si todo es valido
+            //buscar el articulo asignar el nobre de la imagen y actualizarlo
+            return res.status(404).send({
+                fichero:req.files,
+                split: file_split,
+                file_ext
+            });
+        }           
 
-        //buscar el articulo asignar el nobre de la imagen y actualizarlo
-        return res.status(404).send({
-            fichero:req.files,
-            split: file_split,
-            file_ext
-        });
+        
+       
     }
    
 };// end controller
