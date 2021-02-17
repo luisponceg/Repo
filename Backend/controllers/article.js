@@ -223,7 +223,7 @@ var controller ={
 
     } ,
 
-    upload: (req,res)=>{
+    upload: (req, res)=>{
         // configurar el modulo connect multypart routes/articles.js
 
         // Recoger el fichero de la peticion
@@ -256,7 +256,7 @@ var controller ={
             //borrar el archivo subido            
             fs.unlink(file_path,(err)=>{
                 return res.status(200).send({
-                    status: error,
+                    status: 'error',
                     message: 'La extension de la imagen no es valida'
                 });
             });
