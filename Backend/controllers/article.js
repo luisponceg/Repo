@@ -254,7 +254,7 @@ var controller ={
         //comprobar la extension, solo imagenes, si es valida borre el fichero
         if (file_ext != 'png' && file_ext != 'jpg' && file_ext != 'jpeg' && file_ext != 'gif' ){
             //borrar el archivo subido
-            fs.urlink(file_path,(err)=>{
+            fs.unlink(file_path,(err)=>{
                 return res.status(200).send({
                     status: error,
                     message: 'La extension de la imagen no es valida'
