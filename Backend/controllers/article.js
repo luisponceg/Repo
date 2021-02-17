@@ -272,7 +272,7 @@ var controller ={
 
         
        
-    }
+    },//end upload file
    
 };// end controller
 
