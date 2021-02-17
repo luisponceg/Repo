@@ -238,7 +238,8 @@ var controller ={
 
         //buscar el articulo asignar el nobre de la imagen y actualizarlo
         return res.status(404).send({
-            fichero:req.files
+            fichero:req.files,
+            split: file_split
         });
     }
    
