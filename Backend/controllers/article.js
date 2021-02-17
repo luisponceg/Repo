@@ -220,7 +220,7 @@ var controller ={
     upload: (req,res)=>{
         // configurar el modulo connect multypart routes/articles.js
 
-        // Recoger el fichero
+        // Recoger el fichero de la peticion
         var file_name = 'Imagen no subida......';
 
         console.log(req.files);
@@ -233,13 +233,25 @@ var controller ={
         //conseguir nombre y la extension del archivo
         var file_path = req.files.file0.path;
         var file_split = file_path.split('\\');
-        
+        //*Advertencia en LINUX o MAC
+        //var file_split = file_path.split('/');
+
+        // Nombre del erchivo
+
+        var file_name = file_split[2];
+
+        // Extension del archivo
+
+        var extension_split = file_name.split('\.');
+        var file_ext = extension_split[1];
+
         //comprobar la extension, solo imagenes, si es valida borre el fichero
 
         //buscar el articulo asignar el nobre de la imagen y actualizarlo
         return res.status(404).send({
             fichero:req.files,
-            split: file_split
+            split: file_split,
+            file_ext
         });
     }
    
