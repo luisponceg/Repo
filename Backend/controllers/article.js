@@ -263,11 +263,21 @@ var controller ={
         }else{
             //si todo es valido
             //buscar el articulo asignar el nobre de la imagen y actualizarlo
-            return res.status(404).send({
-                fichero:req.files,
-                split: file_split,
-                file_ext
+            Article.findOneAndUpdate({_id: articleId},{image: filename},{new:true},(err, articleUpdated)=>{
+                if(err || !articleUpdated){
+                    return res.status(200).send({
+                        status: 'error',
+                        message: 'Error al guardar la imagen del articulo !!!'
+                    });
+                }   
+                return res.status(200).send({
+                    status: 'success',
+                    article: articleUpdated
+                });
+
+
             });
+         
         }           
        
     },//end upload file
