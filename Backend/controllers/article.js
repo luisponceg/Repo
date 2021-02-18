@@ -287,15 +287,18 @@ var controller ={
         var file = req.params.image;
         var path_file = './upload/articles/'+file;
 
-        fs.stat(path_file, (exists) => {
-            if(exists){
+        fs.stat(path_file,(err, stats)=>{
+           
+            if(stats){
+               
                 return res.sendFile(path.resolve(path_file));
             }else{
                 return res.status(404).send({
-                    status: 'error',
-                    message: 'La imagen no existe !!!'
+                    status:'error',
+                    article:'la imagen no existe'
                 });
             }
+ 
         });
     },
    
