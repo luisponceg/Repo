@@ -262,20 +262,23 @@ var controller ={
             });
         }else{
             //si todo es valido
+            var articleId = req.params.id;
+            if(articleId){
             //buscar el articulo asignar el nobre de la imagen y actualizarlo
-            Article.findOneAndUpdate({_id: articleId},{image: filename},{new:true},(err, articleUpdated)=>{
+
+            Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new:true}, (err, articleUpdated) => {
                 if(err || !articleUpdated){
                     return res.status(200).send({
                         status: 'error',
-                        message: 'Error al guardar la imagen del articulo !!!'
+                        message: 'Error al guardar la imagen de articulo !!!'
                     });
-                }   
+                }
                 return res.status(200).send({
                     status: 'success',
                     article: articleUpdated
                 });
             });
-         
+            } 
         }           
        
     },//end upload file
