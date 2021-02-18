@@ -287,7 +287,7 @@ var controller ={
         var file = req.params.image;
         var path_file = './upload/articles/'+file;
 
-        fs.exists(path_file, (exists) => {
+        fs.stat(path_file, (exists) => {
             if(exists){
                 return res.sendFile(path.resolve(path_file));
             }else{
