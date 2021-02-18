@@ -274,8 +274,6 @@ var controller ={
                     status: 'success',
                     article: articleUpdated
                 });
-
-
             });
          
         }           
