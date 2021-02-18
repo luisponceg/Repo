@@ -11,6 +11,14 @@ var article_routes = require('./routes/article');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 //CORS para permitir peticiones desde el front-end
+// Configurar cabeceras y cors
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');//permite que cualquier cliente realice peticiones ajax
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 //Añadir prefijo para rutas/cargar rutas
 app.use('/api',article_routes);
 //ruta o metodo de prueba
