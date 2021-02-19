@@ -1,11 +1,13 @@
 import React from 'react';
 import logo from './assets/images/logo.svg';
 import './assets/ccs/App.css';
+//Importar componentes
+import MiComponente from './components/MiComponente'
 
 function HolaMundo(nombre, edad){
   var presentacion = <div>
      <h2>Hola, soy {nombre}</h2>
-     <h3>Tengo {edad}</h3>
+     <h3>Tengo {edad} años</h3>
     </div>;
  
   return presentacion;
@@ -20,15 +22,11 @@ function App() {
           Bienvenido al master de react
         </p>
         {HolaMundo(nombre,33)}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
+      <section className="companentes">
+        <MiComponente/>
+      </section>
     </div>
   );
 }
