@@ -13,7 +13,7 @@ function HolaMundo(nombre, edad){
   return presentacion;
 }
 function App() {
-  var nombre = "LuisPonce"
+  var nombre = "Luis Ponce"
   return (
     <div className="App">
       <header className="App-header">
@@ -24,7 +24,7 @@ function App() {
         {HolaMundo(nombre,33)}
         
       </header>
-      <section className="companentes">
+      <section className="componentes">
         <MiComponente/>
       </section>
     </div>
