@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './assets/images/logo.svg';
 import './assets/ccs/App.css';
 
-function HolaMundo(nombre){
+function HolaMundo(nombre, edad){
   var presentacion = <div>
      <h2>Hola, soy {nombre}</h2>
      <h3>Tengo {edad}</h3>
