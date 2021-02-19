@@ -3,7 +3,11 @@ import logo from './assets/images/logo.svg';
 import './assets/ccs/App.css';
 
 function HolaMundo(nombre){
-  var presentacion = <h2>Hola, soy {nombre}</h2>
+  var presentacion = <div>
+     <h2>Hola, soy {nombre}</h2>
+     <h3>Tengo {edad}</h3>
+    </div>;
+ 
   return presentacion;
 }
 function App() {
@@ -15,7 +19,7 @@ function App() {
         <p>
           Bienvenido al master de react
         </p>
-        {HolaMundo(nombre)}
+        {HolaMundo(nombre,33)}
         <a
           className="App-link"
           href="https://reactjs.org"
