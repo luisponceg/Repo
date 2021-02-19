@@ -22,11 +22,12 @@ function App() {
           Bienvenido al master de react
         </p>
         {HolaMundo(nombre,33)}
-        
-      </header>
-      <section className="componentes">
+        <section className="componentes">
         <MiComponente/>
       </section>
+        
+      </header>
+      
     </div>
   );
 }
