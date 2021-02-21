@@ -9,8 +9,17 @@ class MiComponente extends React.Component{
         }
         return (
             <div className='mi componente"'>
-               <h1>Hola soy el componente: MiComponente</h1> 
-               <h2>Probando el componente</h2>  
+               <h1>'Receta:' + receta.nombre</h1> 
+               <h2>'Calorias: ' + receta.calorias</h2>
+               <ol>
+               {
+                   receta.ingredientes.map((ingrediente,i) =>{
+                       console.log(ingredientes);
+
+
+                   })
+               }
+               </ol>  
                <hr/>
             </div>
                  
