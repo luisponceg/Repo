@@ -9,4 +9,4 @@ class Peliculas extends Component {
 
 }
 
-export default Peliculas;
+export default Peliculas; 
