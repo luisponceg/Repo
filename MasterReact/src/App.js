@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './assets/images/logo.svg';
 import './assets/ccs/App.css';
 //Importar componentes
-import MiComponente from './components/MiComponente'
+import MiComponente from './components/MiComponente';
+import Peliculas from './components/Peliculas';
 
 function HolaMundo(nombre, edad){
   var presentacion = <div>
@@ -24,6 +25,7 @@ function App() {
         {HolaMundo(nombre,33)}
         <section className="componentes">
         <MiComponente/>
+        <Peliculas/>
       </section>
         
       </header>
