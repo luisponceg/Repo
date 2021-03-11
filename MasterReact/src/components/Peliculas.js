@@ -1,10 +1,14 @@
-import React, {Component} from 'react;'
+import React, { Component } from 'react';
+import MensajeEstatico from './MensajeEstatico';
 
 class Peliculas extends Component {
-    render(){
+    render() {
         return (
-            <h4>Soy el componente de peliculas </h4>
-        )
+            <div id="peiculas">
+                <h4>Soy el componente de peliculas </h4>
+                <MensajeEstatico />
+            </div>
+        );
     }
 
 }
