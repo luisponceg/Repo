@@ -29,7 +29,7 @@ class Peliculas extends Component {
                                 <img src={peliculas.image} alt={peliculas.titulo}/>
                             </div>
                            
-                            <h2>{peliculas.titulo</h2>
+                            <h2>{peliculas.titulo}</h2>
                             <span class="date">
                                 Hace 5 min
                             </span>
