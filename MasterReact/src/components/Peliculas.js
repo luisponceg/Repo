@@ -10,7 +10,8 @@ class Peliculas extends Component {
 
         ],
       
-        nombre: 'Cine de Autor'
+        nombre: 'Cine de Autor',
+        favorita: {}
     };
 
     cambiarTitulo = () => {
@@ -24,9 +25,12 @@ class Peliculas extends Component {
         });
     }
 
-    favorita = (pelicula) => {
+    favorita = (pelicula,indice) => {
         console.log("FAVORITA MARCADA");
-        console.log(pelicula);
+        console.log(pelicula,indice);
+        this.setState({
+            favorita:pelicula
+        });
     }
 
 
@@ -35,15 +39,19 @@ class Peliculas extends Component {
             <div id="content" className="peliculas">
                 <h2 className="subheader">Peliculas</h2>
                 <p>Seleccion de peliculas favoritas de {this.state.nombre}</p>
-                <div>
+                <p>
                     <button onClick={this.cambiarTitulo}>
                             Cambiar titulo de batman
                     </button>
-                </div>
-                <p>
-                    <strong>La pelicula favorita es: </strong>
-                    <sapn>X</sapn>
                 </p>
+                {this.state.favorita.titulo &&
+                 <p className = "favorita">
+                   <strong>La pelicula favorita es: </strong>
+                   <span>{this.state.favorita.titulo}</span>
+                 </p>
+
+                }
+                
                 {/** crear componentes peliculas */}
                 
                 <div id="articles" className="peliculas">
@@ -53,6 +61,7 @@ class Peliculas extends Component {
                            <Pelicula 
                            key={i} 
                            pelicula={pelicula}
+                           indice={i}
                            marcarFavorita={this.favorita}
                            />
                         )                                      
