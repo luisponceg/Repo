@@ -24,8 +24,9 @@ class Peliculas extends Component {
         });
     }
 
-    favorita = () => {
+    favorita = (pelicula) => {
         console.log("FAVORITA MARCADA");
+        console.log(pelicula);
     }
 
 

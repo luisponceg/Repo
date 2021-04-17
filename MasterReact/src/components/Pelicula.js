@@ -6,6 +6,7 @@ class Pelicula extends Component {
         this.props.marcarFavorita(this.props.pelicula);
     }
     render (){
+        const pelicula = this.props,pelicula;
         const {titulo,image} = this.props.pelicula;
         return(
             <article class="article-item" id="article-template">
