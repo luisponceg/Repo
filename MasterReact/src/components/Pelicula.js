@@ -9,20 +9,20 @@ class Pelicula extends Component {
         const pelicula = this.props,pelicula;
         const {titulo,image} = this.props.pelicula;
         return(
-            <article class="article-item" id="article-template">
-            <div class="image-wrap">
+            <article className="article-item" id="article-template">
+            <div className="image-wrap">
                 <img src={image} alt={titulo}/>
             </div>
            
             <h2>{titulo}</h2>
-            <span class="date">
+            <span className="date">
                 Hace 5 min
             </span>
             <a href="#">Leer mas</a>
             <button onClick={this.marcar}>
                 Marcar como favorita
             </button>
-            <div class="clearfix"></div>
+            <div className="clearfix"></div>
         </article>
 
         )
