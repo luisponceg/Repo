@@ -10,7 +10,7 @@ class Pelicula extends Component {
         const {titulo,image} = this.props.pelicula;
         return(
             <article className="article-item" id="article-template">
-            <div className="image-wrap">
+            <div className="image-wrap"> 
                 <img src={image} alt={titulo}/>
             </div>
            
