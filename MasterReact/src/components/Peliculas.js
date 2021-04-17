@@ -35,6 +35,11 @@ class Peliculas extends Component {
 
 
     render() {
+        var pStyle = {
+            backgrong: 'green',
+            color: 'white',
+            padding: '10px'
+        };
         return (
             <div id="content" className="peliculas">
                 <h2 className="subheader">Peliculas</h2>
@@ -45,7 +50,7 @@ class Peliculas extends Component {
                     </button>
                 </p>
                 {this.state.favorita.titulo &&
-                 <p className = "favorita">
+                 <p className = "favorita" style={pStyle}>  
                    <strong>La pelicula favorita es: </strong>
                    <span>{this.state.favorita.titulo}</span>
                  </p>
@@ -54,7 +59,7 @@ class Peliculas extends Component {
                 
                 {/** crear componentes peliculas */}
                 
-                <div id="articles" className="peliculas">
+                <div id="articles" className="peliculas" s>
                 {
                     this.state.peliculas.map((pelicula, i)=> {
                         return(
