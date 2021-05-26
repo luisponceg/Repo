@@ -33,10 +33,7 @@ class Peliculas extends Component {
         });
     }
     
-    componentDidMount(){
-        alert("Se acaba de cargar el componente Peliculas");
-    }
-
+ 
     render() {
         var pStyle = {
             backgrong: 'green',
