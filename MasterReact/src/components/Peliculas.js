@@ -32,7 +32,10 @@ class Peliculas extends Component {
             favorita:pelicula
         });
     }
-
+    
+    componentDidMount(){
+        alert("Se acaba de cargar el componente Peliculas");
+    }
 
     render() {
         var pStyle = {
