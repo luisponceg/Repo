@@ -61,6 +61,21 @@ class Peliculas extends Component {
             color: 'white',
             padding: '10px'
         };
+        var favorita;
+        if (this.state.favorita.titulo){
+            favorita=( 
+            <p className = "favorita" style={pStyle}>  
+            <strong>La pelicula favorita es: </strong>
+            <span>{this.state.favorita.titulo}</span>
+          </p>
+
+            );
+        }else{
+            favorita = (
+                <p>NO HAY PELICULA FAVORITA</p>
+            );
+        }
+
         return (
             <div id="content" className="peliculas">
                 <h2 className="subheader">Peliculas</h2>
@@ -70,7 +85,7 @@ class Peliculas extends Component {
                             Cambiar titulo de batman
                     </button>
                 </p>
-                {this.state.favorita.titulo ?(
+                {/*{this.state.favorita.titulo ?(
                  <p className = "favorita" style={pStyle}>  
                    <strong>La pelicula favorita es: </strong>
                    <span>{this.state.favorita.titulo}</span>
@@ -78,8 +93,8 @@ class Peliculas extends Component {
                 ) : (
                     <p>NO HAY PELICULA FAVORITA</p>
                 )
-                }
-                
+                }*se comenta por que se genere su similar con las las condicionales if/else linea 64/}
+                {favorita}
                 {/** crear componentes peliculas */}
                 
                 <div id="articles" className="peliculas" s>
