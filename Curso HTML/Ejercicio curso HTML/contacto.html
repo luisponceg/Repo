@@ -9,34 +9,35 @@
 
         <!--Menu-->
         <ul>
-            <li>Inicio</li>
-            <li>Contenido</li>
-            <li>Contacto</li>
+            <li ><a href="index.html" title ="inicio">Inicio</a></li>
+            <li ><a href="contenido.html" title ="contenido">Contenido</a></li>
+            <li ><a href="contacto.html" title ="contacto">Contacto</a></li>
         </ul>
 
-        <!--Contenido de Index-->
-        <h2>Tabla de contenidos</h2>
-        <table border ="1">
-            <tr>
-                <th>Perro</th>
-                <th>Oso</th>
-                <th>Caballo</th>
-                <th>Gato</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagenes/perro.jpg" alt="" height="150px">
-                </td>
-                <td>
-                    <img src="imagenes/oso.jpg" alt="" height="150px">
-                </td>
-                <td>
-                    <img src="imagenes/caballo.jpg" alt="" height="150px">
-                </td>
-                <td>
-                    <img src="imagenes/gato.jpg" alt="" height="150px">
-                </td>
-            </tr>
-        </table>
-        
+        <!--Contenido -->
+        <h2>Contactos</h2>
+        <form action="">
+            <p>
+                <label for="nombre">Nombre</label><br/>
+            <input type="text" name ="nombre"/>
+            </p>
+
+            <p>
+                <label for="biografia">Biografia</label><br/>
+                <textarea name="biografia" id="" cols="30" rows="10"></textarea>
+            </p>
+
+            <p>
+                <label for="edad"></label><br/>
+                <select name="edad" id="">
+                    <option value="mayor">Mayor de edad</option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="65">Mayor de 65</option>
+                </select>
+            </p>
+            <input type="submit" value="Enviar email">
+            
+        </form>
+
+       
     </body>
