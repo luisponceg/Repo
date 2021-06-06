@@ -1,0 +1,108 @@
+/*body{
+    background: grey;
+}
+
+/*
+################## SELECTORES
+*/
+/*Selector universal-con éste selector selecionamos todos los elemtos de html*/
+/*Generalmente lo utilizamos para homogenizar la fuent ey los márgenes*/
+*{
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
+ /*margin: 0px;
+ padding: 0px;*/
+}
+
+/*Selector de etiqueta*/
+h1{
+    background:brown;
+    color:white;
+    font-size:50px;
+    padding:10px;     
+}
+
+a{
+    font-size: 18px;
+    color:yellowgreen;
+    text-decoration: none;
+}
+
+footer a {
+    font-size: 18px;
+    color :red;
+}
+/*Selector de id*/
+#descripcion{
+    
+    border: 1px solid black;
+
+}
+
+#titulo{
+    background: blue; /*Anteriormete se cambió el estilo a h1 pero css acepta el ultimo cambio*/
+}
+/*Selector de clase*/
+.parrafo{
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.parrafo2{
+    background: burlywood;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+/*Selector de atributo*/
+#usuario form{
+    border:5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#usuario form *{
+    display: block;               /*edita el comportamiento como bloque o como linea*/
+    padding: 0px;
+}
+
+input[type="text"]{  /*aplica estilos a los atributos tipo texto*/
+    margin-bottom: 5px ;
+    padding: 10px;
+    width:300px;
+}
+
+input[type="submit"]{
+    background: green;
+    color:white;
+    padding: 15px;
+    text-transform:uppercase ;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/*Selectores hijo*/
+
+/*Estos selectores nos sirven para dar estilos a las sublistas*/
+
+#menu >li >a{              /*a plica el estilo atodos los elementos despuesd de la etiqueta menu>li>a*/
+    font-size: 18px ;
+    color: red;
+    text-decoration: none;
+}
+/*prioridad en ccs*/
+/*aqui vemos como el ultimo estilo agregado es el que aplica en el elemento pero tambien vemos que CSS da prioridad a las reglas mas especificas*/
+/*#saludo h1 tiene prioridad sobre H1 porque es mas especifico*/
+#saludo h1{
+    background: yellow;
+
+}
+h1{
+    background: purple;
+}
+
+/* la expersion !importan es la prioridad maxima en  todos los estilos*/
+h1{
+    background: purple !important;
+}
+
