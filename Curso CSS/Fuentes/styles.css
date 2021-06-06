@@ -1,0 +1,36 @@
+@font-face{
+    font-family: FuentePersonalizada;
+    src: url(fonts/Kaushan_Script/KaushanScript-Regular.ttf);
+}
+body{
+    background: tomato;
+}
+
+h1{
+    font-family: 'Mansalva', cursive;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 45px;
+   
+    /*Colores*/
+
+    /*Colores del sistema*/
+    color : mediumturquoise;
+    /*Colores hexadecimales*/
+    color: #7FFFD4;
+    /*Colores RGB */
+    color: rgb(231, 19, 118);
+    /*Colores RGBA*/
+    color: rgba(231, 19, 118, 0.24);
+
+}
+h3{
+    font-family: FuentePersonalizada;
+    font-size: 20px;
+}
+
+p{
+    font-family: cursive;
+    font-size: 10px;
+    font-weight: 900;
+}
