@@ -1,6 +1,10 @@
 body{
     background: tomato;
-    background-image: url("img/patron1.img");
+    background-image: url("img/patron1.png");
+    background-repeat: repeat-x;   /*repite el patron en el eje indicado*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;/*cuando se hace scroll solo se mueve el texto y no la imagen*/
+    background-size: 100%;
 }
 
 #caja{
@@ -8,4 +12,10 @@ body{
     padding: 10px;
     background-color: blue;
     color:white;
+}
+h2{
+    color:crimson;
+    background:white;
+    background-image: url("img/patron2.jpg");
+    border: 5px solid black;
 }
