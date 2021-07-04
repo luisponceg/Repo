@@ -1,37 +1,37 @@
-body{
-    background: tomato;
-    background-image: url("img/patron1.png");
-    background-repeat: repeat-x;   /*repite el patron en el eje indicado*/
-    /*background-repeat: no-repeat;*/
-    /*background-attachment: fixed;/*cuando se hace scroll solo se mueve el texto y no la imagen*/
-    background-attachment: fixed;
-    background-size: 100%;
-    color:black;
-    /*background-position: left; modificamos la posision de la imagem*/
-    text-align: justify;
-    text-indent: 15px; /* El identado se presenta cuando hay mas de un parrafo*/
-    word-spacing: 10px;/*Espacio entre palabras*/ 
-    /*Letter-spacing: 5px; Espacio entre letras*/
+*{
+    margin: 0px;
+    padding: 0px;
+}/*Con esto eliminamos las mergenes que vienen por defecto en el navegado, podemos probar eliminando esta  funcion para ver el cambio*/
+
+.caja{
+    display: block;/*Activamos el comportamiento como caja*/
+    width: 250px;
+    height: 250px;
+    /*min-width: none;*/
+    /*max-width: none;*/
+    background-color: cadetblue;
+    border: 10px solid red;
+    margin: 15px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    margin-left: 24px;
+    padding: 20px;
+    float: left;
 }
 
+#cajas{
+    max-width: 1540 px;
+}
 
-#caja{
-    border:5px solid black;
-    padding: 10px;
-    background-color: blue;
-    color:white;
-    font-family: "Open Sans";
+.caja p{
+    font-weight: bold;
     text-align: center;
-    line-height: 50px;/* Ajustamos el espacio entre las lineas de texto*/
-    text-transform: uppercase;
-    /*text-decoration: overline ;*/
-    text-decoration: line-through ;
-
-
+    font-size: 20px;
+    font-family: Arial;
+    line-height: 230px;
 }
-h2{
-    color:crimson;
-    background:white;
-    background-image: url("img/patron2.jpg");
-    border: 5px solid black;
+
+.clearfix{
+    float: none;
+    clear: both;/*Tenemos la opcion de lef y right para eliminar los elemntos flotados segun sea el caso*/
 }
