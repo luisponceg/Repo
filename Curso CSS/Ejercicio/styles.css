@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+
+}
+
+#general{
+    width: 1200px;
+    margin: 0px auto;
+    margin-top: 20px ;
+    border: 1px solid grey;
+}
+
+#header{
+    width: 100%;
+    height: 100%;
+    background: rgb(15,118,236);
+    text-decoration: none;
+    text-align: center;
+    line-height: 70px;
+}
+
+.clearfix{
+    float: none;
+    clear:both;
+}
+#menu{
+    background-color: #eeeeee;
+}
+#menu ul li{
+    /* display: inline-block; */
+    display: block;
+    float: left;
+    padding: 15px;
+    border-right: 1px solid;
+}
+#menu ul li a{
+    display: block;
+    padding: 15px;
+    color: #444;
+
+}
+
+#menu ul li:hover{
+    background: rgb(12, 49, 92);
+    cursor: pointer; /*ilimina justo cuando el cursor apunta en el texto */
+}
+
+#menu ul li a:hover{
+    display: block;
+    color:white;
+}
+#contenido{
+    float: left;
+    width: 68%;
+    border: 1px solid green;/*ponemos un border solo para ver el ancho del contenido*/
+}
+#lateral{
+    float: left;
+    width: 30%;
+    border: 1px solid red;
+}
+#contenido.caja{
+    width: 40%;
+    height: 250px;
+    background-color: red;
+    border-width: 5px solid white;
+    float: left;
+    margin: 20px;
+}
