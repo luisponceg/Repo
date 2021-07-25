@@ -7,14 +7,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW 0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
     <style>
+
         /* https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal  */
       .modal.fade .modal-dialog {
         -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -22,11 +24,14 @@
             -o-transition: -o-transform 0.3s ease-out;
                 transition: transform 0.3s ease-out;
         }
+
       
     </style>
+
     <title>Ventana modal con videos dinámicos</title>
   </head>
   <body>
+
     <main class="container">
         <h2 class="mt-5">Videos en ventana modal</h2>
         <div class="row mt-5">
@@ -43,94 +48,97 @@
                   <button        
                     id="botonVentanaModal"            
                     type="button"
+                    class="btn btn-primary" >
                     Abrir video responsivo
-                </button>
-
-                <div
-                  class="modal fade"
-                  id="ventanaModal"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="ventanaModalLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-xl" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="ventanaModalLabel">Video</h5>
-                        <button
-                          type="button"
-                          class="close"
-                          data-dismiss="modal"
-                          aria-label="Close"
-                        >
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="embed-responsive embed-responsive-4by3">
-                          <iframe
-                              id="iframeVideo"
-                              class="embed-responsive-item"
-                              src="https://www.youtube.com/embed/lXY0pGYJdaw"                              
-                              allow="autoplay"
-                          ></iframe>
+                  </button>
+              
+                  <div
+                    class="modal fade"
+                    id="ventanaModal"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="ventanaModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-xl" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="ventanaModalLabel">Video</h5>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
                         </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button
-                          type="button"
-                          class="btn btn-secondary"
-                          data-dismiss="modal"
-                        >
-                          Close
-                        </button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <div class="modal-body">
+                          <div class="embed-responsive embed-responsive-4by3">
+                            <iframe
+                                id="iframeVideo"
+                                class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/lXY0pGYJdaw"                              
+                                allow="autoplay"
+                            ></iframe>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-          </div>
-      </div>
-  
+            </div>
+        </div>
+
+
+    
 </main>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js" ></script>
-  <script src="js/bootstrap.min.js" ></script>
-  <script type="text/javascript">
-      $(function(){
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script type="text/javascript">
+        $(function(){
 
-        const $botonVentanaModal=$('#botonVentanaModal');
-        const $ventanaModal = $('#ventanaModal');
-        const $selectVideos=$('#catalogoVideos');
-        const $iframeVideo = $('#iframeVideo');
-
-
-        $botonVentanaModal.on('click',function(){
-
-          let videoSrc= $selectVideos.val();
-          if(videoSrc){
-
-            $iframeVideo.attr('src',videoSrc+"?autoplay=1");
-
-            $ventanaModal.modal('show');
+          const $botonVentanaModal=$('#botonVentanaModal');
+          const $ventanaModal = $('#ventanaModal');
+          const $selectVideos=$('#catalogoVideos');
+          const $iframeVideo = $('#iframeVideo');
 
 
-          }
-          else{
-            alert('Es necesario seleccionar un video.');
-          }
+          $botonVentanaModal.on('click',function(){
 
-        });
+            let videoSrc= $selectVideos.val();
+            if(videoSrc){
+
+              $iframeVideo.attr('src',videoSrc+"?autoplay=1");
+
+              $ventanaModal.modal('show');
 
 
-        $ventanaModal.on('hidden.bs.modal', function (event) {
+            }
+            else{
+              alert('Es necesario seleccionar un video.');
+            }
 
-          $iframeVideo.attr('src',null);
+          });
 
-        });
 
-      });    
-  </script>
-</body>
+          $ventanaModal.on('hidden.bs.modal', function (event) {
+            
+            $iframeVideo.attr('src',null);
+
+          });
+           
+        });    
+    </script>
+  </body>
 </html>
