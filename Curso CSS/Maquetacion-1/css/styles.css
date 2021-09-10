@@ -86,6 +86,7 @@ body{
     line-height: 40px;
     float: left;
     border-right: 1px solid gray;
+    transition: all 500ms;
 }
 
 #nav > ul > li a{
@@ -98,4 +99,74 @@ body{
 
 #nav > ul > li a:first-child{
     border-left: 1px solid gray;
+    
+}
+
+#nav > ul > li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 4px green inset;
+}
+/* MENU DESPLEGABLE */
+#nav > ul > li > ul {
+    display:none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+#nav > ul > li:hover > ul {
+    display:block;
+}
+
+#nav > ul >li:hover > ul > li{
+    background-color: #F2F1F0;
+    border-bottom: 1px solid #D6D6D6 ;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+
+} 
+#nav > ul >li:hover > ul > li a{
+    color:#666666;
+    border-left:none;
+
+
+} 
+#nav > ul >li:hover > ul > li:hover{
+    /* box-shadow: 0px 0px 6px #ccc; */
+    background: rgb(156, 140, 140);
+} 
+
+/* CONTENIDO */
+#content{
+    width: 1250px;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+
+/* BARRA LATERAL */
+#aside{
+    width: 250px;
+    float:left;
+    margin:30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+}
+
+#aside.widget{
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+
+}
+
+#aside.widget:last-child{
+  margin-bottom: 20px;
 }
